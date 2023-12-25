@@ -8,9 +8,6 @@
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://storagedevarj.blob.core.windows.net/"
 		},
-		"triggerblob_properties_typeProperties_scope": {
-			"value": "/subscriptions/1f640edc-bb0e-4c94-9b67-882c9a36fe3c/resourceGroups/Dev-Prod-Analysis/providers/Microsoft.Storage/storageAccounts/storagedevarj"
-		},
 		"containerUri": {
 			"value": ""
 		},
