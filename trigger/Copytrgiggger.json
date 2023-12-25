@@ -1,0 +1,24 @@
+{
+	"name": "Copytrgiggger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyData",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/banking/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/1f640edc-bb0e-4c94-9b67-882c9a36fe3c/resourceGroups/Dev-Prod-Analysis/providers/Microsoft.Storage/storageAccounts/storagedevarj",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
