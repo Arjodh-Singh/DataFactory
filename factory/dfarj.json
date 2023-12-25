@@ -1,0 +1,9 @@
+{
+	"name": "dfarj",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e839093-88d7-4c08-a912-dd9d258e35bd",
+		"tenantId": "7b418af8-40de-4dd5-a429-6bbf0c425172"
+	}
+}
