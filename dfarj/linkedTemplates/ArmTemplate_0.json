@@ -72,7 +72,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "*",
+						"fileName": "*.csv",
 						"container": "banking"
 					},
 					"columnDelimiter": ",",
