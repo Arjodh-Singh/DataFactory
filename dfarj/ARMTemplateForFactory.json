@@ -10,10 +10,6 @@
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://storagedevarj.blob.core.windows.net/"
-		},
-		"blobtrig_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/1f640edc-bb0e-4c94-9b67-882c9a36fe3c/resourceGroups/Dev-Prod-Analysis/providers/Microsoft.Storage/storageAccounts/storagedevarj"
 		}
 	},
 	"variables": {
@@ -181,36 +177,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/blobtrig')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "CopyData",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/banking/blobs/",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('blobtrig_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/CopyData')]"
-			]
 		}
 	]
 }
